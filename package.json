@@ -1,6 +1,7 @@
 {
   "name": "household-splitter",
   "private": true,
+  "packageManager": "pnpm@10.30.3",
   "scripts": {
     "dev": "pnpm --filter @splitter/web dev",
     "build": "pnpm --filter @splitter/web build"
