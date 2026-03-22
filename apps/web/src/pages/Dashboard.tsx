@@ -103,7 +103,7 @@ export default function Dashboard() {
         <p className="font-ui text-[11px] font-medium uppercase tracking-[0.1em] text-text-muted">
           This month's spending
         </p>
-        <p className="font-display text-[36px] font-light text-text-primary mt-1">
+        <p className="font-display text-[32px] sm:text-[36px] font-light text-text-primary mt-1">
           {formatCAD(monthlyTotal)}
         </p>
       </div>

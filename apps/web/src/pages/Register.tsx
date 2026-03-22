@@ -33,7 +33,7 @@ export default function Register() {
   }
 
   return (
-    <div className="min-h-screen bg-bg flex items-center justify-center px-6">
+    <div className="min-h-[100dvh] bg-bg flex items-center justify-center px-5 sm:px-6">
       <div className="w-full max-w-app">
         <img src="/logo.png" alt="The Household" className="w-20 h-20 mx-auto mb-4 rounded-2xl object-contain" />
         <h1 className="font-heading text-[28px] text-text-primary text-center mb-2">

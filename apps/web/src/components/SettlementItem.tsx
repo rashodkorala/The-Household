@@ -71,7 +71,7 @@ export default function SettlementItem({
           <button
             onClick={onSettle}
             disabled={loading}
-            className="font-ui text-[13px] text-surface bg-btn rounded-pill px-5 py-2 disabled:opacity-50"
+            className="touch-active font-ui text-[13px] text-surface bg-btn rounded-pill px-5 py-2.5 disabled:opacity-50"
           >
             {loading ? 'Sending...' : 'Mark as paid'}
           </button>
@@ -113,7 +113,7 @@ export default function SettlementItem({
             <button
               onClick={onConfirm}
               disabled={loading}
-              className="w-full font-ui text-[13px] font-medium text-surface bg-btn rounded-pill py-3 disabled:opacity-50"
+              className="touch-active w-full font-ui text-[13px] font-medium text-surface bg-btn rounded-pill py-3.5 disabled:opacity-50"
             >
               {loading
                 ? 'Confirming...'

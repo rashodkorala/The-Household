@@ -85,13 +85,13 @@ export default function Settings() {
         <label className="font-ui text-[11px] font-medium uppercase tracking-[0.1em] text-text-muted block mb-2">
           Invite Code
         </label>
-        <div className="flex items-center gap-3">
-          <span className="font-ui text-[20px] tracking-[0.2em] text-text-primary font-medium">
+        <div className="flex items-center gap-3 flex-wrap">
+          <span className="font-ui text-[18px] sm:text-[20px] tracking-[0.2em] text-text-primary font-medium">
             {household?.invite_code}
           </span>
           <button
             onClick={handleCopyCode}
-            className="font-ui text-[13px] text-text-secondary border border-border rounded-pill px-4 py-2 hover:border-border-strong transition-colors"
+            className="touch-active font-ui text-[13px] text-text-secondary border border-border rounded-pill px-4 py-2.5 transition-colors"
           >
             {copied ? 'Copied!' : 'Copy'}
           </button>

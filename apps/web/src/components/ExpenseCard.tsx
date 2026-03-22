@@ -37,7 +37,7 @@ export default function ExpenseCard({ expense, currentMemberId }: ExpenseCardPro
 
   return (
     <div
-      className="flex items-center gap-3 py-3 cursor-pointer hover:bg-surface-alt/50 -mx-1 px-1 rounded transition-colors"
+      className="touch-active flex items-center gap-3 py-3.5 cursor-pointer -mx-2 px-2 rounded transition-colors active:bg-surface-alt/60"
       onClick={() => navigate(`/expense/${expense.id}`)}
     >
       <div className="w-9 h-9 rounded-full bg-surface-alt flex items-center justify-center text-lg shrink-0">

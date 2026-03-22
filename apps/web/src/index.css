@@ -15,6 +15,17 @@
   --color-border-strong:#C9C5BC;
   --color-btn-primary:  #1A1A18;
   --color-btn-text:     #FAFAF8;
+  --sat: env(safe-area-inset-top);
+  --sab: env(safe-area-inset-bottom);
+  --sal: env(safe-area-inset-left);
+  --sar: env(safe-area-inset-right);
+}
+
+html {
+  /* Prevent overscroll bounce on iOS */
+  overscroll-behavior: none;
+  /* Smooth scrolling */
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -25,12 +36,36 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Safe area for standalone web app on iPhone */
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
+  padding-top: var(--sat);
+  padding-left: var(--sal);
+  padding-right: var(--sar);
+  /* Prevent text size adjustment on orientation change */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 * {
   box-sizing: border-box;
+  /* Remove tap highlight on mobile */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent iOS zoom on input focus (inputs must be >= 16px) */
+input, select, textarea {
+  font-size: 16px !important;
+}
+
+/* Hide scrollbars on horizontal scroll containers but keep scrollable */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Active state for touchable elements */
+.touch-active:active {
+  opacity: 0.7;
+  transition: opacity 0.1s;
 }

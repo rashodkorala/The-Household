@@ -83,7 +83,7 @@ export default function AddExpense() {
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               placeholder="0.00"
-              className="font-display text-[48px] font-light text-text-primary text-center bg-transparent border-none focus:outline-none w-48 placeholder:text-text-muted"
+              className="font-display text-[42px] sm:text-[48px] font-light text-text-primary text-center bg-transparent border-none focus:outline-none w-full max-w-[200px] placeholder:text-text-muted"
               required
             />
           </div>
@@ -115,16 +115,16 @@ export default function AddExpense() {
           <label className="font-ui text-[11px] font-medium uppercase tracking-[0.1em] text-text-muted block mb-2">
             Category
           </label>
-          <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1">
+          <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1 hide-scrollbar">
             {CATEGORIES.map((cat) => (
               <button
                 key={cat}
                 type="button"
                 onClick={() => setCategory(category === cat ? null : cat)}
-                className={`font-ui text-[13px] whitespace-nowrap rounded-pill px-4 py-2 border transition-colors shrink-0 ${
+                className={`touch-active font-ui text-[13px] whitespace-nowrap rounded-pill px-4 py-2.5 border transition-colors shrink-0 ${
                   category === cat
                     ? 'bg-btn text-surface border-btn'
-                    : 'bg-transparent text-text-secondary border-border hover:border-border-strong'
+                    : 'bg-transparent text-text-secondary border-border'
                 }`}
               >
                 {cat}

@@ -31,7 +31,7 @@ export default function HouseholdSetup() {
   }
 
   return (
-    <div className="min-h-screen bg-bg flex items-center justify-center px-6">
+    <div className="min-h-[100dvh] bg-bg flex items-center justify-center px-5 sm:px-6">
       <div className="w-full max-w-app">
         <div className="bg-surface border border-border rounded-md p-6 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
           <div className="w-9 h-1 bg-border-strong rounded-full mx-auto mb-5" />

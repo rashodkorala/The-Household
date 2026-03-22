@@ -167,7 +167,7 @@ export default function ExpenseDetail() {
                 min="0.01"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-                className="font-display text-[48px] font-light text-text-primary text-center bg-transparent border-none focus:outline-none w-48"
+                className="font-display text-[42px] sm:text-[48px] font-light text-text-primary text-center bg-transparent border-none focus:outline-none w-full max-w-[200px]"
                 required
               />
             </div>
@@ -192,13 +192,13 @@ export default function ExpenseDetail() {
             <label className="font-ui text-[11px] font-medium uppercase tracking-[0.1em] text-text-muted block mb-2">
               Category
             </label>
-            <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1">
+            <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1 hide-scrollbar">
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat}
                   type="button"
                   onClick={() => setCategory(category === cat ? null : cat)}
-                  className={`font-ui text-[13px] whitespace-nowrap rounded-pill px-4 py-2 border transition-colors shrink-0 ${
+                  className={`touch-active font-ui text-[13px] whitespace-nowrap rounded-pill px-4 py-2.5 border transition-colors shrink-0 ${
                     category === cat
                       ? 'bg-btn text-surface border-btn'
                       : 'bg-transparent text-text-secondary border-border'
@@ -267,7 +267,7 @@ export default function ExpenseDetail() {
           {emoji}
         </div>
         <h1 className="font-heading text-[24px] text-text-primary">{expense.description}</h1>
-        <p className="font-display text-[44px] font-light text-text-primary leading-none">
+        <p className="font-display text-[36px] sm:text-[44px] font-light text-text-primary leading-none">
           {formatCAD(expense.amount)}
         </p>
         <p className="font-ui text-[13px] text-text-muted">

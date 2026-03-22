@@ -5,7 +5,8 @@
       "Bash(npx:*)",
       "Bash(rm:*)",
       "Bash(pnpm approve-builds:*)",
-      "Bash(pnpm build:*)"
+      "Bash(pnpm build:*)",
+      "Bash(pnpm:*)"
     ]
   }
 }
