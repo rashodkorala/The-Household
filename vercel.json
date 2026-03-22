@@ -1,7 +1,7 @@
 {
-  "buildCommand": "pnpm --filter @splitter/web build",
-  "outputDirectory": "apps/web/dist",
   "installCommand": "pnpm install",
+  "buildCommand": "pnpm --filter @splitter/web build && cp -r apps/web/dist .",
+  "outputDirectory": "dist",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
