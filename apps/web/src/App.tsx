@@ -28,7 +28,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       </main>
 
       {/* Bottom Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 bg-surface border-t border-border">
+      <nav className="fixed bottom-0 left-0 right-0 bg-surface border-t border-border" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
         <div className="max-w-app mx-auto flex items-center justify-around py-2">
           <Link to="/dashboard" className={`flex flex-col items-center gap-1 p-2 ${active('/dashboard')}`}>
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
