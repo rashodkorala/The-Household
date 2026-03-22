@@ -1,0 +1,11 @@
+{
+  "name": "household-splitter",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @splitter/web dev",
+    "build": "pnpm --filter @splitter/web build"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  }
+}
